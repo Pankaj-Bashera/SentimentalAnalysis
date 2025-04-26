@@ -1,0 +1,122 @@
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .section {
+    height: 800px; /* Each section takes up the full viewport height */
+    padding: 5%;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+.section:first-child {
+  position: relative; /* Required for absolute positioning of child elements */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-start; /* Align content to the top */
+  align-items: flex-start; /* Align content to the left */
+  padding: 20px; /* Add some padding for spacing */
+  overflow: hidden; /* Prevent content overflow */
+  min-height: 100vh; /* Optional: Make the section full height */
+}
+
+/* Style for the content container */
+.content-container {
+  width: 50%; /* Limit the width of the content */
+  margin-top: 20px; /* Add spacing at the top */
+}
+
+  
+  #home {
+    margin-top: 0; /* Ensure no margin at the top */
+    height: 100vh; /* Full viewport height */
+    /* padding-top: 80px;  */
+    position: relative; /* Ensure proper stacking context */
+    z-index: 1; /* Ensure content stays above the square */
+  }
+  
+  .content {
+    color: white;
+    text-align: left;
+    margin-top: 20px;
+    position: relative; /* Ensure proper stacking context */
+    z-index: 2; /* Ensure content stays above the square */
+  }
+  
+  .section > .content > .header {
+    font-size: 300px;
+  }
+/*   
+  #about {
+    background-color: #85aa1c;
+  } */
+
+  
+  .text-box-container {
+    margin-top: 20px; /* Space between the paragraph and the text box */
+    display: flex;
+    justify-content: center; /* Center the text box horizontally */
+  }
+  
+  .text-box {
+    width: 80%; /* Make the text box responsive */
+    max-width: 600px; /* Limit the maximum width */
+    padding: 15px; /* Add padding inside the text box */
+    font-size: 16px; /* Increase font size for readability */
+    border: 2px solid #ddd; /* Add a border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    color: #333; /* Text color */
+    resize: none; /* Disable resizing */
+    outline: none; /* Remove default focus outline */
+    transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .text-box:focus {
+    border-color: #85aa1c; /* Highlight border when focused */
+  }
+
+  .submit-button {
+    margin-top: 20px; /* Space between the text box and the button */
+    padding: 10px 20px; /* Add padding inside the button */
+    font-size: 16px; /* Increase font size for readability */
+    /* background-color: #85aa1c; Match the primary color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    /* transition: background-color 0.3s ease; Smooth transition for hover effect */
+  }
+  
+  /* .submit-button:hover {
+    background-color: #6b8a17; /* Darker shade on hover  */
+  
+
+  
+  .rounded-square {
+    position: absolute; /* Position absolutely to remove from document flow */
+    top: 15%; /* Center vertically */
+    left: 15%; /* Center horizontally */
+    transform: translate(-40%, -60%) rotate(75deg); /* Center and rotate the square */
+    width: 900px; /* Width of the square */
+    height: 900px; /* Height of the square */
+    background-color: #29234e; /* Background color */
+    border-radius: 50px; /* Rounded corners */
+    z-index: 1; /* Push it behind other elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+  }
+
+  .robot-image {
+    position: absolute; /* Position the image absolutely within the section */
+    bottom: 50px; /* Distance from the bottom */
+    right: 80px; /* Distance from the right */
+    max-width: 470px; /* Adjust the size of the image */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Ensure it appears above other content if necessary */
+}
