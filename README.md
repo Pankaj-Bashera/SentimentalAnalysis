@@ -38,11 +38,6 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
-  - [Basic Usage](#basic-usage)
-  - [Example Input and Output](#example-input-and-output)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Getting Started
 
