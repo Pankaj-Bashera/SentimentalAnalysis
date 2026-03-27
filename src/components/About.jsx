@@ -15,9 +15,9 @@ const EmotionGraph = ({ scores }) => {
       {
         data: scores,
         backgroundColor: "transparent",
-        borderColor: "#29234e",
+        borderColor: "var(--primary)",
         borderWidth: 2,
-        pointBackgroundColor: "rgba(255, 99, 132, 0.9)",
+        pointBackgroundColor: "var(--chart-1)",
       },
     ],
   };
@@ -28,20 +28,20 @@ const EmotionGraph = ({ scores }) => {
         beginAtZero: true,
         ticks: {
           stepSize: 0.2,
-          color: "#000",
+          color: "var(--muted-foreground)",
         },
         pointLabels: {
           font: {
             size: 16 // Increase label size around the radar
           },
-          color: "#000"
+          color: "var(--foreground)"
         },
         angleLines: {
-          color: "#555",
+          color: "var(--border)",
           lineWidth: 1,
         },
         grid: {
-          color: "#222",
+          color: "var(--border)",
           lineWidth: 1 // Thickness of circular grid lines
         }
       },
@@ -113,24 +113,24 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="section flex bg-accent">
+    <section id="about" className="section flex bg-card">
       <div className="w-1/2 p-2 mt-12">
-        <h1 className="mb-4 text-md font-extrabold text-soft dark:text-white md:text-3xl lg:text-5xl">
-          <span className="block p-2 text-transparent bg-clip-text bg-gradient-to-r to-[#40048c] from-[#0735fa]">
-            Sentiment Analysis 
+        <h1 className="mb-4 text-md font-extrabold text-foreground md:text-3xl lg:text-5xl">
+          <span className="block p-2 text-transparent bg-clip-text bg-gradient-to-r to-primary from-ring">
+            Sentiment Analysis
           </span>
           <span className="text-transparent bg-clip-text bg-gradient-to-r to-primary from-secondary">
-             Model
+            Model
           </span>
         </h1>
 
-        <p className="text-lg font-normal text-black lg:text-xl dark:text-black-100">
+        <p className="text-lg font-normal text-muted-foreground lg:text-xl">
           Analyze sentiment from social media posts with our AI-powered model. Simply input text or upload data, and let the neural network do the rest. Get real-time insights into emotions.
         </p>
 
         <div className="text-box-container mb-4">
           <textarea
-            className="text-box w-full p-2 bg-grey-800 border rounded"
+            className="text-box w-full p-2 bg-input border-input text-foreground rounded focus:border-ring focus:ring-ring"
             placeholder="Enter your thoughts here..."
             rows="5"
             value={text}
@@ -138,22 +138,8 @@ const About = () => {
           ></textarea>
         </div>
 
-        {/* File Upload Section using your styles */}
-        {/* <div className="mb-4">
-          <label className="block mb-2 pl-16 text-sm font-medium text-gray-900 dark:text-white" htmlFor="file_input">
-            Upload file
-          </label>
-          <input
-            className="w-3/5  text-sm text-primary border border-gray-300 rounded-lg cursor-pointer  dark:text-primary focus:outline-none dark:bg-warm dark:border-gray-600 dark:placeholder-gray-400"
-            id="file_input"
-            type="file"
-            accept=".txt,.doc,.docx"
-            onChange={handleFileUpload}
-          />
-        </div> */}
-
         <button
-          className="submit-button mt-2 p-2 bg-secondary hover:bg-blue-800 text-white rounded"
+          className="submit-button mt-2 p-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded transition-colors"
           onClick={handleSubmit}
           disabled={loading}
         >

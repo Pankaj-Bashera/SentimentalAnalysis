@@ -10,9 +10,9 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="section bg-[#cbb2bf]">
+    <section id="services" className="section bg-muted">
 
-      <h1 class="text-5xl font-extrabold text-[#1a1a2e] mb-8 ">Our Services</h1>
+      <h1 className="text-5xl font-extrabold text-foreground mb-8">Our Services</h1>
 
       <Slideshow images={images} />
     </section>
